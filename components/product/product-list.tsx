@@ -1,8 +1,8 @@
+import type { Product } from "@/types";
 import ProductCard from "./product-card";
 
 type DataProps = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: any[];
+  data: Product[];
   title: string;
   limit?: number;
 };
@@ -26,8 +26,8 @@ const ProductList = ({ title, data }: DataProps) => {
       >
         {data
           ?.filter((item) => item.images?.length > 0)
-          ?.map((item, index) => (
-            <ProductCard product={item} key={index} />
+          ?.map((item) => (
+            <ProductCard product={item} key={item.id} />
           ))}
       </div>
     </div>

@@ -19,3 +19,14 @@ export const cn = (...inputs: ClassValue[]) => {
 export const convertToPlainObject = <T>(value: T): T => {
   return JSON.parse(JSON.stringify(value));
 };
+
+/**
+ * Format number with decimal places
+ */
+export const formatNumberWithDecimal = (num: number): string => {
+  const [int, decimals] = num.toString().split(".");
+
+  if (decimals) return `${int}.${decimals.padEnd(2, "0")}`;
+
+  return `${int}.00`;
+};

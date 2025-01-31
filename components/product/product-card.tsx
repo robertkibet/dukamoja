@@ -2,12 +2,9 @@ import { Card, CardHeader, CardContent } from "../ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import ProductPrice from "./product-price";
+import type { Product } from "@/types";
 
-type Product = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  product: any;
-};
-const ProductCard = ({ product }: Product) => {
+const ProductCard = ({ product }: { product: Product }) => {
   const { name, brand, slug, rating, stock, price } = product;
 
   return (
@@ -19,6 +16,7 @@ const ProductCard = ({ product }: Product) => {
             height={300}
             width={300}
             alt={product.description}
+            loading="lazy"
           />
         </Link>
       </CardHeader>

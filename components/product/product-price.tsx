@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
+import type { Product } from "@/types";
 
 type ProductPriceProps = {
   className?: string;
-  value: number;
+  value: Product["price"];
 };
 const ProductPrice = ({ className, value }: ProductPriceProps) => {
   const stringValue = Number(value).toFixed(2);
