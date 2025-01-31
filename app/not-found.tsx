@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { APP_NAME } from "@/lib/constants";
+import { APP_LOGO, APP_NAME } from "@/lib/constants";
 import Image from "next/image";
 
 const NotFoundPage = () => {
@@ -11,7 +11,7 @@ const NotFoundPage = () => {
       data-testid="not-found-page"
     >
       <Image
-        src="/images/logo.svg"
+        src={APP_LOGO}
         width={48}
         height={48}
         alt={`${APP_NAME}`}

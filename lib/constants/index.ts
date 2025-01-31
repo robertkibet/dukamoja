@@ -4,3 +4,7 @@ export const APP_DESCRIPTION =
   "Your complete modern ecommerce store";
 export const SERVER_URL =
   process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
+export const APP_LOGO =
+  process.env.NODE_ENV === "development"
+    ? "https://storage.googleapis.com/cors-free/applications/projects/dukamoja/dev/images/logo.svg"
+    : "https://storage.googleapis.com/cors-free/applications/projects/dukamoja/prod/images/logo.svg";
