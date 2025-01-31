@@ -20,7 +20,10 @@ const ProductCard = ({ product }: { product: Product }) => {
           />
         </Link>
       </CardHeader>
-      <CardContent className="p-4 grid gap-4">
+      <CardContent
+        className="p-4 grid gap-4"
+        style={{ gridTemplateRows: "max-content minmax(40px, 1fr) 32px" }}
+      >
         <div className="text-xs">{brand}</div>
         <Link href={`/product/${slug}`}>
           <h2 className="text-sm font-medium">{name}</h2>
