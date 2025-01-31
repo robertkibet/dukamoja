@@ -19,5 +19,9 @@ export const getLatestProducts = async (limit = LATEST_PRODUCTS_LIMIT) => {
     },
   });
 
-  return convertToPlainObject(data);
+  return convertToPlainObject(data).map((items) => ({
+    ...items,
+    price: String(items.price),
+    rating: String(items.price),
+  }));
 };
