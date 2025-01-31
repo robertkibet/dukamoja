@@ -1,8 +1,8 @@
-import type sampleData from "@/data/sample-data";
 import ProductCard from "./product-card";
 
 type DataProps = {
-  data: typeof sampleData.products;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any[];
   title: string;
   limit?: number;
 };
