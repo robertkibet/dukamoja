@@ -1,6 +1,9 @@
 import sampleData from "@/data/sample-data";
 import { PrismaClient } from "@prisma/client";
 
+/**
+ * Seed db with sample data
+ */
 export const seeder = async () => {
   const prisma = new PrismaClient();
 
